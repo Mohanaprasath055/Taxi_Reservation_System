@@ -31,11 +31,12 @@ public class BookTaxi {
             Allocated_taxi.setPickupLocation(pickupLocation);
             Allocated_taxi.setPickupTime(pickupTime);
             Allocated_taxi.setDropLocation(dropLocation);
+            Allocated_taxi.setCurrentPosition(dropLocation);
             Allocated_taxi.setDropTime(pickupTime + Math.abs(dropLocation - pickupLocation));
             Allocated_taxi.setEarnings((Allocated_taxi.getEarnings()) + ((Math.abs(dropLocation - pickupLocation)*15-5)*10)+100);
             Allocated_taxi.setTaxiID(taxiList.indexOf(Allocated_taxi)+1);
             bookingDetails.add((Taxi)Allocated_taxi.clone());
-            return " Your Taxi has been successfully allocated. \nYour Taxi number is " + Allocated_taxi.getTaxiID();
+            return "Your Taxi has been successfully allocated. \nYour Taxi number is " + Allocated_taxi.getTaxiID();
         }
 
         return "Taxi is not available. Thank You!";

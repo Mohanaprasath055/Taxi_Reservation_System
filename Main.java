@@ -22,6 +22,8 @@ public class Main {
                     System.out.println("Enter the pickup time:");
                     int pickupTime = s.nextInt();
                     System.out.println(BookTaxi.bookingTaxi(pickupLocation, dropLocation, pickupTime));
+                    System.out.println("---------------------------------------");
+                    break;
                 }
                 case 2:
                 {
